@@ -1,4 +1,6 @@
+import java.util.Scanner;
 public class Main {
+
     public static void main(String[] args) {
         System.out.println("Hello world!");
         int myFavoriteNumber = 32;
@@ -66,5 +68,6 @@ public class Main {
         //        What happens if you increment a numeric variable past the type's capacity?
 //        it will stay the same unless you use math.. add zeros
 //        Hint: Integer.MAX_VALUE is a class constant (we'll learn more about these later) that holds the maximum value for the int type.
+
     }
 }
