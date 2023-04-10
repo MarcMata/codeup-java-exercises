@@ -4,8 +4,8 @@ import java.util.Scanner;
 public class ConsoleExercises {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        double pi = 3.14159;
-        System.out.format("The value of pi is approximately %s%n", pi);
+//        double pi = 3.14159;
+//        System.out.format("The value of pi is approximately %.2f.%n", pi);
 
 
 //        System.out.print("Enter a integer: ");
@@ -48,5 +48,14 @@ public class ConsoleExercises {
         var perimeter = (length * 2) + (width * 2);
         System.out.printf("The total area of your room is: %d ft.%n", area);
         System.out.printf("The total perimeter of your room is: %d ft", perimeter);
+
+        System.out.println("Enter a length: ");
+        String lengthDecimal = scanner.nextLine();
+        System.out.println("Enter a width: ");
+        String widthDecimal = scanner.nextLine();
+        double areaDecimal = Double.parseDouble(lengthDecimal) * Double.parseDouble(widthDecimal);
+        double perimeterDecimal = Double.parseDouble(lengthDecimal) + Double.parseDouble(widthDecimal) * 2;
+
+
     }
 }
