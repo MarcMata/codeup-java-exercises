@@ -20,7 +20,6 @@ public class MethodsExercise {
         subtraction(2,5);
         multiplication(3,21);
         division(5,2);
-
     }
 
 }
