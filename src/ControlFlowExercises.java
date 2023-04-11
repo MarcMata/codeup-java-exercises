@@ -1,7 +1,8 @@
-import java.sql.SQLOutput;
+import java.util.Scanner;
 
 public class ControlFlowExercises {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         //problem 1
 //        int i = 5;
 //        while ( i <= 15) {
@@ -64,6 +65,58 @@ public class ControlFlowExercises {
 //                System.out.println("FizzBuzz: " + i);
 //            }
 //        }
+        //problem 3
+//        System.out.println("What number would you like to go up to? ");
+//        int num = 1;
+//        int squared = 0;
+//        int cubed = 0;
+//        String output = sc.nextLine();
+//        int newOutput = Integer.parseInt(output);
+//        System.out.println("Here is your table!");
+//        System.out.println("number | squared | cubed");
+//        System.out.println("------ | ------- | -----");
+//        for (int i = 1; i <= newOutput; i++){
+//            num = i;
+//            squared = num * num;
+//            cubed = num * num * num;
+//            System.out.printf("%-7d| %-8d| %-7d%n", num, squared, cubed);
+//        }
+//      problem 4 starts
+        boolean continueGrades = true;
+        while (continueGrades) {
+            System.out.println("Enter a numerical grade from 0 - 100: ");
+            String grade = sc.nextLine();
+            int parsedGrade = Integer.parseInt(grade);
+            if (parsedGrade <= 100 && parsedGrade >= 88){
+                System.out.println("You received an A");
+            } else if (parsedGrade <= 87 && parsedGrade >= 80) {
+                System.out.println("You received a B");
+            }  else if (parsedGrade <= 79 && parsedGrade >= 67) {
+                System.out.println("You received a C");
+            }  else if (parsedGrade <= 66 && parsedGrade >= 60) {
+                System.out.println("You received a D");
+            }  else if (parsedGrade <= 59 && parsedGrade >= 0) {
+                System.out.println("You received an F");
+            } else {
+                System.out.println("You did not enter a number between 0 and 100");
+            }
+
+            boolean validResponse = false;
+            while (!validResponse) {
+                System.out.println("Enter more grades? (Y/N)");
+                String response = sc.nextLine();
+                if(response.equalsIgnoreCase("N")) {
+                    continueGrades = false;
+                    validResponse = true;
+                } else if (response.equalsIgnoreCase("Y")){
+                    validResponse = true;
+                } else {
+                    System.out.println("You did not enter a valid response");
+                }
+            }
+        }
+        //problem 4 ends
+
 
     }
 }
