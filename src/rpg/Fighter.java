@@ -1,6 +1,10 @@
 package rpg;
 
 public class Fighter {
+
+
+    public static int totalFighters;
+
     private String name;
     private int hitPoints;
     private int maxDamage;
@@ -35,6 +39,7 @@ public class Fighter {
         System.out.printf("%s has %d hitpoints and does %d maximum damage. Armor class is a %d%n", name, hitPoints, maxDamage, armorClass);
     }
     public Fighter(){
+        totalFighters++;
         //no argument constructor
     }
 
@@ -42,6 +47,7 @@ public class Fighter {
         this.name = name;
         this.hitPoints = hitPoints;
         this.maxDamage = maxDamage;
+        totalFighters++;
     }
 
 

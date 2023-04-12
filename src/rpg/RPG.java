@@ -34,5 +34,6 @@ public class RPG {
         //did not have to construct. Not an instance method. A STATIC Method
         int d20roll = D20.roll20();
         System.out.println(d20roll);
+        System.out.println(Fighter.totalFighters);
     }
 }
