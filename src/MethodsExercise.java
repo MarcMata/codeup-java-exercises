@@ -98,6 +98,7 @@ public class MethodsExercise {
 //problem 5
 
 
+
     public static void main(String[] args) {
         //create basic arithmetic, addition, subtraction, multiplication, division.
 //        System.out.println(addition(1,3));
@@ -108,6 +109,9 @@ public class MethodsExercise {
 //        System.out.println(remainder(5,2));
 //        System.out.println(multiplyMethod(5,2));
 //        System.out.println(multiplyRecursion(5,20));
+//        int userInput = getInteger(1, 10);
+//        long factorial = getFactorial(userInput);
+//        System.out.printf("Factorial => %d%n", factorial);
         rollDice(diceSides());
     }
 
