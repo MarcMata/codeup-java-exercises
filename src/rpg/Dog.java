@@ -38,7 +38,18 @@ public class Dog {
         this.maxDamage = maxDamage;
     }
 
+    public Dog() {
+    }
+
+    public Dog(String name, String sound, int hitPoints, int maxDamage) {
+        this.name = name;
+        this.sound = sound;
+        this.hitPoints = hitPoints;
+        this.maxDamage = maxDamage;
+    }
+
     public void makeSound() {
+        String randomQuote = Quote.randomQuote();
         System.out.printf("%s goes %s%n", name, sound);
     }
     public void printStats() {

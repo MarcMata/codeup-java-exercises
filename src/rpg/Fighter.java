@@ -5,6 +5,8 @@ public class Fighter {
     private int hitPoints;
     private int maxDamage;
 
+    public static int armorClass = 15;
+
     public String getName() {
         return name;
     }
@@ -30,7 +32,18 @@ public class Fighter {
     }
 
     public void printStats () {
-            System.out.printf("%s has %d hitpoints and does %d maximum damage.%n", name, hitPoints, maxDamage);
-        }
+        System.out.printf("%s has %d hitpoints and does %d maximum damage. Armor class is a %d%n", name, hitPoints, maxDamage, armorClass);
     }
+    public Fighter(){
+        //no argument constructor
+    }
+
+    public Fighter(String name, int hitPoints, int maxDamage) {
+        this.name = name;
+        this.hitPoints = hitPoints;
+        this.maxDamage = maxDamage;
+    }
+
+
+}
 
