@@ -1,3 +1,5 @@
+import java.lang.Math;
+import java.util.Scanner;
 public class JavaUtils {
     public static void main(String[] args) {
         System.out.println(randomNumber(12,100));
