@@ -3,7 +3,7 @@ package util;
 import java.util.Scanner;
 
 public class InputTest {
-    public static void main(String[] args) {
+    public void main(String[] args) {
 //        System.out.println(Input.getString("WHAT IS UP BROOKLYN"));
 //        System.out.println(Input.yesNo("Are you having a good day? "));
         System.out.println(Input.getInt(12, 24, "Enter something between 12 and 24"));
