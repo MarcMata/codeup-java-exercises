@@ -6,6 +6,13 @@ public class ReferenceProblems {
 
     }
 
+    static class ArithmeticSample {
+        public static String main(String[] args) {
+            int integers = 5;
+            String string = "Hello";
+            return integers + string;
+        }}
+
     public static class Demo {
         public static void main(String[] args) {
             int[] ages = new int[20];
@@ -34,6 +41,7 @@ public class ReferenceProblems {
             }
         }
     }
+
     public static class Demo2 {
         public static void main(String[] args){
             int[] ages = {18, 33, 24, 64, 45};
@@ -44,5 +52,16 @@ public class ReferenceProblems {
             System.out.println(sum);
         }
     }
-
+    //finding an average of arrays
+    public static class Program2 {
+        public static void main(String[] args) {
+            double[] revenue = {88750, 125430, 99700, 14500, 158000, 65000, 99000, 189000, 210000, 42000, 165800, 258900};
+            double sum = 0;
+            for (double x : revenue){
+                sum += x;
+            }
+            double average = sum / revenue.length;
+            System.out.println(average);
+        }
+    }
 }
