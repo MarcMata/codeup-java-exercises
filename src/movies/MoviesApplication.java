@@ -4,12 +4,22 @@ import  util.Input2;
 import java.util.Arrays;
 import java.util.Objects;
 
+
+
 public class MoviesApplication {
-    public static void main(String[] args) {
-        boolean hitZero = true;
-        while (hitZero) {
-        Input2 input = new Input2();
-        int userInput = input.getInt("""
+    public static void showAllMoviesFromCategory(String category){
+        for(Movie movie : MoviesArray.findAll()){
+            if (movie.getCategory().equals(category)) {
+                System.out.printf("%s -- %s%n", movie.getName(), movie.getCategory());
+            }
+        }
+    }
+    public static void showAllMoviesFromCategory(){
+        for(Movie movie : MoviesArray.findAll()){
+                System.out.printf("%s -- %s%n", movie.getName(), movie.getCategory());
+            }
+        }
+    private static String menu = """
                 What would you like to do?
 
                 0 - exit
@@ -19,7 +29,14 @@ public class MoviesApplication {
                 4 - view movies in the horror category
                 5 - view movies in the scifi category
                                 
-                Enter your choice:""");
+                Enter your choice:""";
+
+
+    public static void main(String[] args) {
+        boolean hitZero = true;
+        while (hitZero) {
+        Input2 input = new Input2();
+        int userInput = input.getInt(menu);
         System.out.println(userInput);
         Movie[] allMovies = MoviesArray.findAll();
         switch (userInput) {
@@ -33,32 +50,21 @@ public class MoviesApplication {
                 }
                 break;
             case 2:
-                for (Movie movie : allMovies) {
-                    if (Objects.equals(movie.getCategory(), "animated")) {
-                        System.out.printf("%s -- %s%n", movie.getName(), movie.getCategory());
-                    }
-                }
+                showAllMoviesFromCategory("animated");
+//                for (Movie movie : allMovies) {
+//                    if (Objects.equals(movie.getCategory(), "animated")) {
+//                        System.out.printf("%s -- %s%n", movie.getName(), movie.getCategory());
+//                    }
+//                }
                 break;
             case 3:
-                for (Movie movie : allMovies) {
-                    if (Objects.equals(movie.getCategory(), "drama")) {
-                        System.out.printf("%s -- %s%n", movie.getName(), movie.getCategory());
-                    }
-                }
+                showAllMoviesFromCategory("drama");
                 break;
             case 4:
-                for (Movie movie : allMovies) {
-                    if (Objects.equals(movie.getCategory(), "horror")) {
-                        System.out.printf("%s -- %s%n", movie.getName(), movie.getCategory());
-                    }
-                }
+                showAllMoviesFromCategory("horror");
                 break;
             case 5:
-                for (Movie movie : allMovies) {
-                    if (Objects.equals(movie.getCategory(), "scifi")) {
-                        System.out.printf("%s -- %s%n", movie.getName(), movie.getCategory());
-                    }
-                }
+                showAllMoviesFromCategory("scifi");
                 break;
             default:
                 System.out.println("Invalid choice.");
