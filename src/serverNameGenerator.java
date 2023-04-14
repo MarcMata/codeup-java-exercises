@@ -26,12 +26,11 @@ public class serverNameGenerator {
         nouns[9] = "Car";
 
 
-    int randomNumber1 = (int)(Math.random()*10) +1;
-    int randomNumber2 = (int)(Math.random()*10) +1;
+    int randomNumber1 = (int)(Math.random()*10);
+    int randomNumber2 = (int)(Math.random()*10);
         System.out.println(randomNumber1);
         System.out.println(randomNumber2);
-        System.out.printf("Random Name: %s%s%n", nouns[randomNumber1-1], adjectives[randomNumber2-1]);
-
+        System.out.printf("Random Name: %s%s%n", nouns[randomNumber1], adjectives[randomNumber2]);
 
     }
 
