@@ -1,4 +1,5 @@
 package movies;
+import Person.Person;
 import  util.Input2;
 
 import java.util.Arrays;
@@ -7,6 +8,13 @@ import java.util.Objects;
 
 
 public class MoviesApplication {
+    public static Movie[] addMovie(Movie[] moviesArray, Movie movie){
+        Movie[] newMovieArray = Arrays.copyOf(moviesArray, moviesArray.length+1);
+        newMovieArray[newMovieArray.length-1] = movie;
+        return newMovieArray;
+
+    }
+
     public static void showAllMoviesFromCategory(String category){
         for(Movie movie : MoviesArray.findAll()){
             if (movie.getCategory().equals(category)) {
@@ -28,6 +36,7 @@ public class MoviesApplication {
                 3 - view movies in the drama category
                 4 - view movies in the horror category
                 5 - view movies in the scifi category
+                6 - add a movie!!!!
                                 
                 Enter your choice:""";
 
@@ -65,6 +74,15 @@ public class MoviesApplication {
                 break;
             case 5:
                 showAllMoviesFromCategory("scifi");
+                break;
+            case 6:
+                String name = input.getString("Enter the name of the movie");
+                input.getGhost();
+                String category = input.getString("Enter the category");
+                allMovies = addMovie(MoviesArray.findAll(), new Movie(name, category));
+                for (Movie movie : allMovies) {
+                    System.out.printf("%s -- %s%n", movie.getName(), movie.getCategory());
+                }
                 break;
             default:
                 System.out.println("Invalid choice.");
