@@ -14,4 +14,7 @@ public class Vehicle {
     public void makeNoise(){
         System.out.println("Vroom vroom");
     }
+
+    public void breakingDownNoise() {
+    }
 }

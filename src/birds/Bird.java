@@ -1,6 +1,7 @@
 package birds;
 
 public class Bird {
+
     private String name;
 
     public String getName() {
@@ -12,9 +13,17 @@ public class Bird {
     }
 
     public void makeNoise(){
-        System.out.println(this.name + " goes Tweet tweet");
+        System.out.println(this.name + " says tweet tweet");
     }
-    public void layEgg(){
-        System.out.println("Laying an egg");
+
+    public void layEggs(){
+        System.out.println("Laying an egg.");
+    }
+
+    public Bird(){
+        System.out.println("New bird created!");
+    }
+    public Bird(String name){
+        this.name = name;
     }
 }

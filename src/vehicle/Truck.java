@@ -7,6 +7,6 @@ public class Truck extends Vehicle {
 
     public void breakingDownNoise(){
         super.makeNoise();
-        System.out.println(this.getName() + "goes" + "crryackyackyack");
+        System.out.println(this.getName() + " goes " + "crryackyackyack");
     }
 }

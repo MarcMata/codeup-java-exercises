@@ -1,14 +1,24 @@
 package birds;
 
 public class BirdTest {
+
     public static void main(String[] args) {
-        Bird quaker = new Quaker();
-        //if no constructor use quaker.setName("Quaker")
+        Quaker quaker = new Quaker();
         quaker.setName("Quaker");
         quaker.makeNoise();
-        quaker.layEgg();
         Finch finch = new Finch();
         finch.setName("Finch");
         finch.makeNoise();
+        Goose goose = new Goose();
+        goose.setName("Goose");
+        goose.makeNoise();
+
+        Bird goose2 = new Goose();
+        goose2.setName("Second goose");
+        goose2.makeNoise();
+
+
+
+
     }
 }
