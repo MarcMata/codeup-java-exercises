@@ -7,6 +7,16 @@ public class Rectangle extends Quadrilateral implements Measureable {
     }
 
     @Override
+    void setWidth() {
+        super.setWidth(this.width);
+    }
+
+    @Override
+    void setLength() {
+        super.setWidth(this.length);
+    }
+
+    @Override
     public double getPerimeter() {
         return (length * 2) + (width * 2);
     }
