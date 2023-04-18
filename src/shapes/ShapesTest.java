@@ -3,14 +3,15 @@ package shapes;
 public class ShapesTest {
     public static void main(String[] args) {
 
+        Measureable myShape;
 
-        Measureable myShape1 = new Rectangle(4, 5);
-        System.out.println(myShape1.getPerimeter());
-        System.out.println(myShape1.getArea());
-        Measureable myShape2 = new Square(5);
-        System.out.println();
-        System.out.println(myShape2.getPerimeter());
-        System.out.println(myShape2.getArea());
+        myShape = new Rectangle(4, 5);
+        System.out.println(myShape.getPerimeter());
+        System.out.println(myShape.getArea());
+
+        myShape = new Square(5);
+        System.out.println(myShape.getPerimeter());
+        System.out.println(myShape.getArea());
 
 //        Rectangle box1 = new Rectangle(4,5);
 //        System.out.println(box1.getPerimeter());
