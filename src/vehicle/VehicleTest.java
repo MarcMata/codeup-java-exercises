@@ -17,12 +17,12 @@ public class VehicleTest {
 //        car.makeNoise();
 //        truck.breakingDownNoise();
 
-        Garage garage = new Garage();
-        garage.vehicles = new Vehicle[3];
-        garage.vehicles[0] = new Car();
-        garage.vehicles[1] = new Truck();
-        garage.vehicles[2] = new Tractor();
-        garage.alarmCascade();
+//        Garage garage = new Garage();
+//        garage.vehicles = new Vehicle[3];
+//        garage.vehicles[0] = new Car();
+//        garage.vehicles[1] = new Truck();
+//        garage.vehicles[2] = new Tractor();
+//        garage.alarmCascade();
 
         //one way to set names???
 //        garage.vehicles[0] = new Car();

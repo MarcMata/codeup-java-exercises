@@ -1,5 +1,7 @@
 package rpg;
 
+import java.util.ArrayList;
+
 public class RPG {
     public static void main(String[] args) {
         Fighter fighter1 = new Fighter();
@@ -35,5 +37,8 @@ public class RPG {
         int d20roll = D20.roll20();
         System.out.println(d20roll);
         System.out.println(Fighter.totalFighters);
+        //Arrays are used when you know how much data you are gonna store
+        //ARRAY LIST METHOD Use array list when you know the amount of data is gonna change
+        ArrayList<Monster> monsterList = new ArrayList<>();
     }
 }
