@@ -1,5 +1,7 @@
 package util;
 
+import com.sun.source.tree.BinaryTree;
+
 import java.util.Scanner;
 
 public class Input2 {
@@ -11,7 +13,7 @@ public class Input2 {
     }
 
     public String getString(){
-        System.out.println("Enter a string:");
+//        System.out.println();
         return scanner.nextLine();
     }
 
@@ -34,41 +36,109 @@ public class Input2 {
     }
 
     public int getInt(int min, int max) {
-        System.out.print("Enter a number between " + min + " and " + max + ": ");
-        int userNum = scanner.nextInt();
-        if (userNum >= min && userNum <= max) {
-            return userNum;
+        while (true) {
+            System.out.print("Enter a number between " + min + " and " + max + ": ");
+            String userInput = getString();
+            try {
+                int userNum = Integer.valueOf(userInput);
+                if (userNum >= min && userNum <= max) {
+                    return userNum;
+                } else {
+                    System.out.println("Number is outside of the specified range.");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Please enter an integer.");
+            }
         }
-        return getInt(min, max);
     }
 
-    public int getInt(){
-        System.out.println("Enter an integer:");
-        return scanner.nextInt();
-    }
-
-    public int getInt(String prompt){
-        System.out.println(prompt);
-        return scanner.nextInt();
-    }
-
-    public double getDouble(double min, double max){
-        System.out.printf("Enter a number between %.1f and %.1f:", min, max);
-        double userNum = scanner.nextDouble();
-        if (userNum >= min && userNum <= max) {
-            return userNum;
+    public int getInt() {
+        while (true) {
+            System.out.print("Enter an integer: ");
+            String userInput = getString();
+            try {
+                return Integer.valueOf(userInput);
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Please enter an integer.");
+            }
         }
-        return getDouble(min, max);
     }
 
-    public double getDouble(){
-        System.out.println("Enter a number (decimals allowed):");
-        return scanner.nextDouble();
+    public int getInt(String prompt) {
+        while (true) {
+            System.out.print(prompt);
+            String userInput = getString();
+            try {
+                return Integer.valueOf(userInput);
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Please enter an integer.");
+            }
+        }
     }
 
-    public double getDouble(String prompt){
-        System.out.println(prompt);
-        return scanner.nextDouble();
+    public double getDouble(double min, double max) {
+        while (true) {
+            System.out.printf("Enter a number between %.1f and %.1f:", min, max);
+            String userInput = getString();
+            try {
+                double userNum = Double.valueOf(userInput);
+                if (userNum >= min && userNum <= max) {
+                    return userNum;
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Please enter a valid number.");
+            }
+        }
+    }
+
+    public double getDouble() {
+        while (true) {
+            System.out.print("Enter a double: ");
+            String userInput = getString();
+            try {
+                return Double.valueOf(userInput);
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Please enter a valid number.");
+            }
+        }
+    }
+
+    public double getDouble(String prompt) {
+        while (true) {
+            System.out.print(prompt);
+            String userInput = getString();
+            try {
+                return Double.valueOf(userInput);
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Please enter a valid number.");
+            }
+        }
+    }
+    public long getBinary() {
+        while (true) {
+            System.out.println("Enter a number and lets turn it into binary: ");
+            String userInput = getString().trim();
+            try {
+                int decimal = Integer.parseInt(userInput);
+                return Long.parseLong(Integer.toBinaryString(decimal));
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Please enter a valid number.");
+            }
+        }
+    }
+
+    public long getHex() {
+        while (true) {
+            System.out.println("Turn your number into a hex: ");
+            String userInput = getString();
+
+        try {
+            int decimal = Integer.parseInt(userInput);
+            return Long.parseLong(Integer.toHexString(decimal));
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid input. Please enter a integer");
+            }
+        }
     }
 
     public void getGhost(){

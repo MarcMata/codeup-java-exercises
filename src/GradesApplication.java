@@ -124,5 +124,4 @@ class Student {
     public void setGrades(List<Double> grades) {
         this.grades = grades;
     }
-
 }
