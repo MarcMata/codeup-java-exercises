@@ -15,10 +15,12 @@ public static void main(String[] args) {
 //        System.out.println(input.yesNo());
 //        System.out.println(input.getInt(1, 100));
 //        System.out.println(input.getDouble(1, 100));
-        System.out.println(input.getHex());
+//        System.out.println(input.getHex());
 
 //        System.out.println(input.getDouble());
 //        input.getGhost();
 //        System.out.println(input.getString());
+        int myNum = input.getInt();
+        System.out.println(myNum);
     }
 }
