@@ -48,46 +48,37 @@ public class MoviesApplication {
         int userInput = input.getInt(menu);
         System.out.println(userInput);
         Movie[] allMovies = MoviesArray.findAll();
-        switch (userInput) {
-            case 0:
-                System.out.println("You chose option to exit.");
-                hitZero = false;
-                break;
-            case 1:
-                for (Movie movie : allMovies) {
-                    System.out.printf("%s -- %s%n", movie.getName(), movie.getCategory());
+            switch (userInput) {
+                case 0 -> {
+                    System.out.println("You chose option to exit.");
+                    hitZero = false;
                 }
-                break;
-            case 2:
-                showAllMoviesFromCategory("animated");
+                case 1 -> {
+                    for (Movie movie : allMovies) {
+                        System.out.printf("%s -- %s%n", movie.getName(), movie.getCategory());
+                    }
+                }
+                case 2 -> showAllMoviesFromCategory("animated");
+
 //                for (Movie movie : allMovies) {
 //                    if (Objects.equals(movie.getCategory(), "animated")) {
 //                        System.out.printf("%s -- %s%n", movie.getName(), movie.getCategory());
 //                    }
 //                }
-                break;
-            case 3:
-                showAllMoviesFromCategory("drama");
-                break;
-            case 4:
-                showAllMoviesFromCategory("horror");
-                break;
-            case 5:
-                showAllMoviesFromCategory("scifi");
-                break;
-            case 6:
-                String name = input.getString("Enter the name of the movie");
-                input.getGhost();
-                String category = input.getString("Enter the category");
-                allMovies = addMovie(MoviesArray.findAll(), new Movie(name, category));
-                for (Movie movie : allMovies) {
-                    System.out.printf("%s -- %s%n", movie.getName(), movie.getCategory());
+                case 3 -> showAllMoviesFromCategory("drama");
+                case 4 -> showAllMoviesFromCategory("horror");
+                case 5 -> showAllMoviesFromCategory("scifi");
+                case 6 -> {
+                    String name = input.getString("Enter the name of the movie");
+                    input.getGhost();
+                    String category = input.getString("Enter the category");
+                    allMovies = addMovie(MoviesArray.findAll(), new Movie(name, category));
+                    for (Movie movie : allMovies) {
+                        System.out.printf("%s -- %s%n", movie.getName(), movie.getCategory());
+                    }
                 }
-                break;
-            default:
-                System.out.println("Invalid choice.");
-                break;
-        }
+                default -> System.out.println("Invalid choice.");
+            }
     }
 
     }
