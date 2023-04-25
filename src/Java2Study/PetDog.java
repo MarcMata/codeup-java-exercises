@@ -22,4 +22,5 @@ public class PetDog extends Pet implements Companion{
             System.out.println(dog.snuggle());
         }
     }
+
 }
