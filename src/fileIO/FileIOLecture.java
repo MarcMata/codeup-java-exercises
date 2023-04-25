@@ -8,6 +8,7 @@ import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import javax.swing.text.MaskFormatter;
 
 public class FileIOLecture {
     public static void main(String[] args) {
@@ -35,7 +36,7 @@ public class FileIOLecture {
             }
         }
         //the directory and the file exist now
-        List<String> groceryList = Arrays.asList("Coffee", "Milk","Double Stuf Oreos");
+        List<String> groceryList = Arrays.asList("Coffee,$23.99", "Milk,$0.99","Double Stuf Oreos,$4.99");
         System.out.println(groceryList);
         try {
             Files.write(dataFile, groceryList);
