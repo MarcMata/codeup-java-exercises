@@ -12,6 +12,7 @@ public class PetDogTest {
         dogs.add(dog1);
         dogs.add(dog2);
         dogs.add(dog3);
+        System.out.println(dog1.getName() + " is trained? " + dog1.isTrained());
         System.out.println();
         PetDog.allSnuggle(dogs);
     }
