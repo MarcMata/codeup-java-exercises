@@ -7,7 +7,14 @@ public class Practice {
     public static void main(String[] args) {
         //correct
 //        System.out.println(subtractTen(1));
-        System.out.println(average(new int[]{1, 2, 3, 4, 97}));
+        ArrayList<Integer> numbers = new ArrayList<Integer>();
+//
+//    // Add some integers to the ArrayList
+        numbers.add(10);
+        numbers.add(20);
+        numbers.add(30);
+        System.out.println(multiplyAll(5,numbers));
+//        System.out.println(average(new int[]{1, 2, 3, 4, 97}));
 
     }
     public static int subtractTen(int num){
@@ -23,7 +30,7 @@ public class Practice {
         return average;
     }
 
-    public static ArrayList<Integer> multipleAll(int num, ArrayList<Integer> arrList){
+    public static ArrayList<Integer> multiplyAll(int num, ArrayList<Integer> arrList){
         ArrayList<Integer> newArrList = new ArrayList<>();
         for(int number:arrList){
              number *= num;
@@ -32,6 +39,15 @@ public class Practice {
         return newArrList;
     }
 
+    public static ArrayList<Integer> multipleAll(int num, ArrayList<Integer> arrList){
+        ArrayList<Integer> newArrList = new ArrayList<>();
+        for(int i = 0; i < arrList.size(); i++){
+            int number = arrList.get(i);
+            number *= num;
+            newArrList.add(number);
+        }
+        return newArrList;
+    }
 
 
 }
