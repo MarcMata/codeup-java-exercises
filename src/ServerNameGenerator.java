@@ -1,4 +1,4 @@
-public class serverNameGenerator {
+public class ServerNameGenerator {
 
     public static void main(String[] args) {
 //array intializer syntax

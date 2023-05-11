@@ -22,6 +22,14 @@ public class PetDog extends Pet implements Companion{
             System.out.println(dog.snuggle());
         }
     }
+    //make a method that makes the dog bark
+    public String bark(){
+        return this.getName() + " barks";
+    }
 
+    //make a method that makes the dog fetch
+    public String fetch(){
+        return this.getName() + " fetches";
+    }
 
 }

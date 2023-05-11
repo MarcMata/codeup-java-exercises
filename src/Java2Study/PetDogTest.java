@@ -15,5 +15,18 @@ public class PetDogTest {
         System.out.println(dog1.getName() + " is trained? " + dog1.isTrained());
         System.out.println();
         PetDog.allSnuggle(dogs);
+        //make the dog bark
+        System.out.println(dog1.bark());
+        //make the dog fetch
+        System.out.println(dog1.fetch());
+        //create a new arrayList of dogs with 20 dogs
+        ArrayList<PetDog> dogs2 = new ArrayList<>();
+        for(int i = 0; i < 20; i++){
+            dogs2.add(new PetDog("Dog" + i, "Breed" + i, true));
+        }
+        //make all the dogs bark
+        for(PetDog dog : dogs2){
+            System.out.println(dog.bark());
+        }
     }
 }
